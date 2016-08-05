@@ -50,8 +50,6 @@ TARGET_BOARD_INFO_FILE := device/htc/flounder/board-info.txt
 
 TARGET_BOOTLOADER_BOARD_NAME := flounder
 
-USE_OPENGL_RENDERER := true
-
 TARGET_RECOVERY_FSTAB := device/htc/flounder/rootdir/fstab.flounder
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
