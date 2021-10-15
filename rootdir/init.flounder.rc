@@ -4,9 +4,9 @@ on early-init
     # Set permissions so radio can read
     chmod 0444 /proc/cmdline
 
-on init
-    export LD_PRELOAD "libshim_zw.so"
+    export LD_PRELOAD "/system/${LIB}/libshim_zw.so"
 
+on init
     # Load persistent dm-verity state
     verity_load_state
 
