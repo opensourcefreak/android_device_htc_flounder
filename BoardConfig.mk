@@ -118,18 +118,6 @@ TARGET_USES_64_BIT_BINDER := true
 
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1
 
-# Don't dex preopt apps to avoid I/O congestion due to paging larger sized
-# pre-compiled .odex files as opposed to background generated interpret-only
-# odex files.
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-      WITH_DEXPREOPT ?= true
-      WITH_DEXPREOPT_DEBUG_INFO := false
-      USE_DEX2OAT_DEBUG := false
-  endif
-endif
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
-
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/flounder
 
 ART_USE_HSPACE_COMPACT=true
