@@ -24,14 +24,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.enable_boot_charger_mode=1
 
-# Dalvik
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapstartsize=16m \
-    dalvik.vm.heapgrowthlimit=192m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=2m \
-    dalvik.vm.heapmaxfree=8m
 # N9 has only two CPUs, so drop dex2oat pressure after boot at runtime
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=1

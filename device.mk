@@ -22,6 +22,9 @@ PRODUCT_PACKAGES := \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
 PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/rootdir/init.flounder.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.rc \
     $(LOCAL_PATH)/rootdir/init.flounder.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.usb.rc \
