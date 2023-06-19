@@ -41,7 +41,7 @@ function blob_fixup() {
     case "${1}" in
         vendor/lib/libglcore.so)
             ;&
-        vendor/lib64/libglcore.so)
+        vendor/lib64/libglcore.so|vendor/lib64/egl/libGLESv2_tegra.so|vendor/lib64/egl/libGLESv1_CM_tegra.so)
             patchelf --add-needed "libutilscallstack.so" "${2}"
             ;;
         vendor/lib/hw/camera.tegra132.so)
