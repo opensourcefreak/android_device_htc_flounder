@@ -39,8 +39,9 @@ volantis_keymaps := $(wildcard $(LOCAL_PATH)/res/raw/*.kcm)
 $(LOCAL_BUILT_MODULE): PRIVATE_VALIDATEKEYMAPS := $(validatekeymaps)
 $(LOCAL_BUILT_MODULE) : $(volantis_keymaps) | $(validatekeymaps)
 	$(hide) $(PRIVATE_VALIDATEKEYMAPS) $^
-	$(hide) mkdir -p $(dir $@) && touch $@
+	#$(hide) mkdir -p $(dir $@) && touch $@
 
+.PHONY : droidcore all_modules
 # Run validatekeymaps unconditionally for platform build.
 droidcore all_modules : $(LOCAL_BUILT_MODULE)
 
