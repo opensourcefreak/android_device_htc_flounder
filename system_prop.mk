@@ -31,7 +31,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609 \
-    persist.tegra.compositor=glcomposer \
+    persist.tegra.compositor=surfaceflinger \
     persist.tegra.decompression=cde-client \
     debug.hwc.force_gpu=1 \
     persist.sys.ui.hw=false \
