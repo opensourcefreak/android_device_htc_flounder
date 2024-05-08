@@ -28,7 +28,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609 \
     persist.tegra.compositor=surfaceflinger \
-    debug.sf.disable_hwc=0 \
     persist.tegra.decompression=cde-client \
     debug.hwc.force_gpu=1 \
     persist.sys.ui.hw=false \
