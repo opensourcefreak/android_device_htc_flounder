@@ -22,6 +22,10 @@ PRODUCT_PACKAGES := \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# APEX
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
@@ -205,8 +209,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.1-impl \
-    android.hardware.graphics.mapper@2.0-impl-2.1
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
+		vendor.nvidia.hardware.graphics.composer@2.0
 
 # Health HAL
 PRODUCT_PACKAGES += \
@@ -222,19 +226,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_zw
 
-# Light HAL
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.flounder
-
 # Memtrack HAL
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
 
-# Power HAL
+# Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl \
-    power.flounder
+	vendor.nvidia.hardware.power@1.0-service
+
+# Light
+PRODUCT_PACKAGES += \
+	android.hardware.light@2.0-service-nvidia
+
+# Health
+PRODUCT_PACKAGES += \
+	android.hardware.health@2.0-service.tegra
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -247,8 +254,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal HAL
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.0-impl \
-    thermal.flounder
+	android.hardware.thermal@1.0-service-nvidia
 
 # USB HAL
 PRODUCT_PACKAGES += \

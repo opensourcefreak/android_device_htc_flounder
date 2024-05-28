@@ -3,4 +3,24 @@
     "repository": "android_kernel_htc_flounder",
     "target_path": "kernel/htc/flounder"
   }
+  {
+    "repository": "android_hardware_nvidia_power",
+    "target_path": "hardware/nvidia/power"
+  }
+  {
+    "repository": "android_hardware_nvidia_thermal",
+    "target_path": "hardware/nvidia/thermal"
+  }
+  {
+    "repository": "android_hardware_nvidia_light",
+    "target_path": "hardware/nvidia/thermal"
+  }
+  {
+    "repository": "android_hardware_nvidia_interfaces",
+    "target_path": "hardware/nvidia/interfaces"
+  }
+  {
+    "repository": "android_device_nvidia_tegra-common",
+    "target_path": "device/nvidia/tegra-common"
+  }
 ]
